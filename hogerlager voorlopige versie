@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HogerLager</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+   body {
+        font-family: Arial, sans-serif;
+        }
+
+    table {
+        width: 300px;
+        border-collapse: collapse;
+        margin: 20px auto;
+        }
+
+    th{
+        background-color: aliceblue;
+        color: blue;
+        padding: 17px;
+        text-align: left;
+        }
+
+    td {
+        padding: 8px;
+    }
+
+    input[type="text"]:focus {
+        border-color: black;
+        outline: none;
+    }
+
+
+p{
+font-size: 25px;
+margin-top:22px;
+}
+</style>
+    <body>
+    
+    <table>
+        <thead>
+    <tr>
+        <th>Spelers</th>
+        <th>Punten</th>
+    </tr>
+        </thead>
+
+        <tbody>
+    <tr>
+        <td><input type="text" placeholder="1.speler"></td>
+        <td><input type="text" placeholder=""></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" placeholder="2.speler"></td>
+        <td><input type="text" placeholder=""></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" placeholder="3.speler"></td>
+        <td><input type="text" placeholder=""></td>
+    </tr>
+
+<tr>
+    <td><input type="text" placeholder="4.speler"></td>
+    <td><input type="text" placeholder=""></td>
+</tr>
+
+<tr>
+    <td><input type="text" placeholder="5.speler"></td>
+    <td><input type="text" placeholder=""></td>
+</tr>
+
+<tr>
+    <td><input type="text" placeholder="6.speler"></td>
+    <td><input type="text" placeholder=""></td>
+</tr>
+
+</tbody>
+</table>
+   
+    <footer> Hoger Lager </footer>
+ 
+</body>
+</html>

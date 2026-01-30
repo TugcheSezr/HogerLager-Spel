@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hoger Lager Spel </title>
+</head>
+<body>
+    <h1>Hoger Lager Spel </h1>
+
+    <p id="resultaat"></p>
+
+    <script>
+        // function gaat een cijfer geven
+        function gooiDobbelsteen() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        // Spelers
+        const aantalSpelers = 6;
+        let getallen = [];
+        let hoogsteGetal = 6;
+        let kandidaten = [];
+
+        for (let i = 1; i <= aantalSpelers; i++) {
+            let spelerGetal = gooiDobbelsteen();
+            getallen[i - 1] = spelerGetal; 
+
+            if (spelerGetal > hoogsteGetal) {
+                hoogsteGetal = spelerGetal;
+                kandidaten = [i]; 
+            } else if (spelerGetal === hoogsteGetal) {
+                kandidaten.push(i);  
+            }
+        }
+
+        // De winnaar gaat hier zien
+        let winnaar = kandidaten[Math.floor(Math.random() * kandidaten.length)];
+
+        //hier komt de resultaten
+        let resultaat = "De resultaten zijn:<br>";
+        for (let i = 0; i < aantalSpelers; i++) {
+            resultaat += "Speler " + (i + 1) + " heeft gegooid: " + getallen[i] + "<br>";
+        }
+
+        resultaat += "Speler " + winnaar + " mag beginnen!";
+
+        document.getElementById("resultaat").innerHTML = resultaat;
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://tse1.mm.bing.net/th?id=OIP.Dej_2xCfSq92I3jXo8mJTwHaDP&pid=Api&P=0&h=180");
+    margin: 0;
+    padding: 20px;
+    
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: rgb(43, 41, 165);
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+#spelers-container {
+    /*een container om spelerinformatie dynamisch weer te geven */
+    margin-bottom: 20px;
+}
+
+.speler {
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+
+button {
+    display: block;
+    /* De knop gaat blok element worden */
+    width: 200px;
+    margin: 20px auto;
+    /* button gaat naar center */
+    padding: 10px;
+    /* spatie in de button */
+    background-color: rgb(142, 184, 227);
+    border-radius: 10px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: rgb(201, 180, 141);
+}
+
+#resultaat {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* dobbelsteen gooien animatie */
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.dobbelsteen {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    margin: 0 auto;
+    }

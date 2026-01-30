@@ -1,0 +1,58 @@
+// Knoppen selecteren
+const goButton = document.getElementById('go');
+const dobbelsteenGooiButton = document.getElementById('dobbelsteen-gooi');
+const hogerButton = document.getElementById('hoger');
+const lagerButton = document.getElementById('lager');
+
+// Eerste status: "Go" knop is actief, de andere zijn inactief
+goButton.disabled = false;
+dobbelsteenGooiButton.disabled = true;
+hogerButton.disabled = true;
+lagerButton.disabled = true;
+
+// Wanneer op de "Go" knop wordt geklikt
+goButton.addEventListener('click', () => {
+    // Simuleer de worp van de computer (voorbeeld)
+    const computerDobbelsteen = Math.floor(Math.random() * 6) + 1;
+    console.log("Computer's dobbelsteen: " + computerDobbelsteen);
+
+    // Zet de "Go" knop inactief, en activeer de "Hoger" en "Lager" knoppen
+    goButton.disabled = true;
+    hogerButton.disabled = false;
+    lagerButton.disabled = false;
+});
+
+// Wanneer op de "Hoger" knop wordt geklikt
+hogerButton.addEventListener('click', () => {
+    // Zet de "Hoger" en "Lager" knoppen inactief, en activeer de "Gooi Dobbelstenen" knop
+    hogerButton.disabled = true;
+    lagerButton.disabled = true;
+    dobbelsteenGooiButton.disabled = false;
+});
+
+// Wanneer op de "Lager" knop wordt geklikt
+lagerButton.addEventListener('click', () => {
+    // Zet de "Hoger" en "Lager" knoppen inactief, en activeer de "Gooi Dobbelstenen" knop
+    hogerButton.disabled = true;
+    lagerButton.disabled = true;
+    dobbelsteenGooiButton.disabled = false;
+});
+
+// Wanneer op de "Gooi Dobbelstenen" knop wordt geklikt
+dobbelsteenGooiButton.addEventListener('click', () => {
+    // Simuleer de worp van de speler (voorbeeld)
+    const spelerDobbelsteen = Math.floor(Math.random() * 6) + 1;
+    console.log("Speler's dobbelsteen: " + spelerDobbelsteen);
+
+    // Zet de "Gooi Dobbelstenen" knop inactief
+    dobbelsteenGooiButton.disabled = true;
+
+    // Bepaal de winnaar (hier wordt alleen een simpele uitkomst weergegeven)
+    if (spelerDobbelsteen > 0 && computerDobbelsteen > 0) {
+        console.log("Winnaar wordt bepaald...");
+        // Hier kan de winnaar bepaald worden en een weergave aan het scherm toegevoegd worden
+    }
+
+    // Zet de "Go" knop weer actief
+    goButton.disabled = false;
+});
