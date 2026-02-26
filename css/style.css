@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url("https://tse1.mm.bing.net/th?id=OIP.Dej_2xCfSq92I3jXo8mJTwHaDP&pid=Api&P=0&h=180");
+    background-image: url("../img/background-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 20px;
     
